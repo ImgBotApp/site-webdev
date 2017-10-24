@@ -1,6 +1,13 @@
 # ANGULAR
 # =======
 
+# Temporary as we transition to angular_router 2:
+/api/angular_router/angular_router/(Route|RouteConfig|RouteParams|OnReuse)-class
+/api/angular_router/angular_router/(ROUTER_DIRECTIVES|ROUTER_PRIMARY_COMPONENT|ROUTER_PROVIDERS)
+
+# Temporary (until v5 of lottery apps are in angular_examples)
+/examples/lottery/
+
 # angular.io is now an Angular app; the link checker has difficulty seeing anchors
 # (probably because the page hasn't been fully generated yet), so skip such links:
 https://angular.io/.*?#
