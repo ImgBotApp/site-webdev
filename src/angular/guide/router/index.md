@@ -96,8 +96,8 @@ Add the package to the pubspec dependencies:
 <?code-excerpt "pubspec.yaml (dependencies)" region="dependencies-wo-forms" title?>
 ```
   dependencies:
-    angular: ^4.0.0
-    angular_router: ^1.0.2
+    angular: ^5.0.0-alpha
+    angular_router: ^2.0.0-alpha
 ```
 
 In any Dart file that makes use of router features, import the router library:

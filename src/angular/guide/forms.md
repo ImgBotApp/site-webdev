@@ -107,8 +107,8 @@ dependencies:
 @@ -8,22 +7,13 @@
 
  dependencies:
-   angular: ^4.0.0
-+  angular_forms: ^1.0.0
+   angular: ^5.0.0-alpha
++  angular_forms: ^1.0.1-alpha
 ```
 
 <?code-excerpt path-base="examples/ng/doc/forms"?>

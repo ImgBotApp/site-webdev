@@ -185,8 +185,8 @@ The `angular_forms` library comes in its own package. Add the package to the pub
 @@ -8,16 +7,14 @@
 
  dependencies:
-   angular: ^4.0.0
-+  angular_forms: ^1.0.0
+   angular: ^5.0.0-alpha
++  angular_forms: ^1.0.1-alpha
 ```
 
 <?code-excerpt path-base="examples/ng/doc/toh-1"?>

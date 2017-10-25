@@ -170,11 +170,11 @@ router is in its own package, first add the package to the app's pubspec:
 ```diff
 --- toh-4/pubspec.yaml
 +++ toh-5/pubspec.yaml
-@@ -7,11 +7,13 @@
+@@ -7,13 +7,18 @@
  dependencies:
-   angular: ^4.0.0
-   angular_forms: ^1.0.0
-+  angular_router: ^1.0.2
+   angular: ^5.0.0-alpha
+   angular_forms: ^1.0.1-alpha
++  angular_router: ^2.0.0-alpha
 ```
 
 Not all apps need routing, which is why the Angular router is

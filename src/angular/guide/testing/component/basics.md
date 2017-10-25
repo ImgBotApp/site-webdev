@@ -28,7 +28,7 @@ are under **`dev_dependencies`**, for example:
 <?code-excerpt "toh-0/pubspec.yaml (dev_dependencies)" title?>
 ```
   dev_dependencies:
-    angular_test: ^1.0.0
+    angular_test: ^1.0.2-alpha
     browser: ^0.10.0
     dart_to_js_script_rewriter: ^1.0.1
     test: ^0.12.21

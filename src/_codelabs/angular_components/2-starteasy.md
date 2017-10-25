@@ -39,15 +39,15 @@ using whatever [Dart web development tools](/tools) you prefer.
 
 <li markdown="1"> Edit **pubspec.yaml** to add a dependency to **angular_components**:
 
-<?code-excerpt "1-base/pubspec.yaml" diff-with="2-starteasy/pubspec.yaml"?>
+<?code-excerpt "1-base/pubspec.yaml" diff-with="2-starteasy/pubspec.yaml" to="dev_dependencies"?>
 ```diff
 --- 1-base/pubspec.yaml
 +++ 2-starteasy/pubspec.yaml
-@@ -7,6 +7,7 @@
+@@ -7,12 +7,16 @@
 
  dependencies:
-   angular: ^4.0.0
-+  angular_components: ^0.8.0
+   angular: ^5.0.0-alpha
++  angular_components: ^0.9.0-alpha
    intl: ^0.14.0
 
  dev_dependencies:

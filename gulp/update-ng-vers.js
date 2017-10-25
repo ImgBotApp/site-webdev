@@ -65,24 +65,57 @@ module.exports = function (gulp, plugins, config) {
     return `^${vers}`;
   }
 
-  // const depOvr = 'dependency_overrides:\n' +
-  //   '  some-pkg:\n' +
-  //   '    git: https://github.com/dart-lang/some-pkg.git\n';
-  // const depOvr2 = 'git:\n' +
-  //   '      url: https://github.com/dart-lang/some-pkg.git\n' +
-  //   '      ref: 1.2.3\n';
-  // const depOvr3 = 'dependency_overrides:\n' +
-  //   `  some-pkg:\n    ${depOvr2}\n`;
+  const depOvr = `
+dependency_overrides:
+  angular:
+    git:
+      url: https://github.com/dart-lang/angular.git
+      path: angular
+  angular_compiler:
+    git:
+      url: https://github.com/dart-lang/angular.git
+      path: angular_compiler
+  angular_forms:
+    git:
+      url: https://github.com/dart-lang/angular.git
+      path: angular_forms
+  angular_router:
+    git:
+      url: https://github.com/dart-lang/angular.git
+      path: angular_router
+  angular_test:
+    git:
+      url: https://github.com/dart-lang/angular.git
+      path: angular_test
+  build: ^0.10.0
+  build_barback: ^0.4.0
 
-  // gulp.task('_dep_overrides', ['_update-acx-vers', '_update-ng-vers'], cb => {
-  //   const baseDir = getBaseDir();
-  //   return gulp.src([
-  //     `${baseDir}/**/pubspec.yaml`,
-  //     `!${baseDir}/**/.pub/**`,
-  //   ]) // , { base: baseDir }
-  //     .pipe(replace(/\btransformers:/, `${depOvr}$&`))
-  //     .pipe(gulp.dest(baseDir));
-  // });
+`;
+  /* Alt:
+  git:
+    url: https://github.com/dart-lang/some-pkg.git
+    ref: 1.2.3
+  */
+
+  gulp.task('_dep_overrides', cb => {
+    const baseDir = getBaseDir();
+    return gulp.src([
+      `${baseDir}/**/pubspec.yaml`,
+      `!${baseDir}/**/.pub/**`,
+    ]) // , { base: baseDir }
+      .pipe(replace(/\btransformers:/, `${depOvr}$&`))
+      .pipe(gulp.dest(baseDir));
+  });
+
+  gulp.task('_remove_overrides', cb => {
+    const baseDir = getBaseDir();
+    return gulp.src([
+      `${baseDir}/**/pubspec.yaml`,
+      `!${baseDir}/**/.pub/**`,
+    ]) // , { base: baseDir }
+      .pipe(replace(/\ndependency_overrides:\n(\s+[\s\S]*?\n)+\n/, ''))
+      .pipe(gulp.dest(baseDir));
+  });
 
   const platform_star =
     `    platform_directives:

@@ -72,9 +72,9 @@ Update package dependencies by adding the Dart [http][] and
    sdk: '>=1.24.0 <2.0.0'
 -
  dependencies:
-   angular: ^4.0.0
-   angular_forms: ^1.0.0
-   angular_router: ^1.0.2
+   angular: ^5.0.0-alpha
+   angular_forms: ^1.0.1-alpha
+   angular_router: ^2.0.0-alpha
 +  http: ^0.11.0
 +  stream_transform: ^0.0.6
 ```
