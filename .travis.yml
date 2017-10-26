@@ -18,9 +18,9 @@ env:
     - JEKYLL_ENV=production
     # E2E and TEST: use --skip=t1|t2|...|tx to skip tests
     # https://github.com/dart-lang/angular/issues/612
-    - E2E_OPT1="--fast --filter=examples/ng/doc/[a-s] --skip=dependency-injection"
-    - E2E_OPT2="--fast --filter=examples/ng/doc/[t-z]"
-    - TEST_OPT=""
+    - E2E_OPT1="--fast --filter=examples/ng/doc/[a-s] --skip=lifecycle-hooks|router"
+    - E2E_OPT2="--fast --filter=examples/ng/doc/[t-z] --skip=toh-5|toh-6"
+    - TEST_OPT="--skip=github_issues|router|toh-5|toh-6"
     - TZ=US/Pacific # normalize build timestamp
   matrix:
     - CI_TASK="build --dartdoc"
